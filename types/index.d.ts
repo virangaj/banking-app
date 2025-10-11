@@ -214,10 +214,12 @@ declare interface FooterProps {
   type?: 'mobile' | 'desktop'
 }
 
+declare interface BankWithAccount extends Bank, Account {}
+
 declare interface RightSidebarProps {
   user: User;
   transactions: Transaction[];
-  banks: Bank[] & Account[];
+  banks: BankWithAccount[];
 }
 
 declare interface SiderbarProps {
